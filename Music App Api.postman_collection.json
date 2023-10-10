@@ -1,0 +1,1422 @@
+{
+	"info": {
+		"_postman_id": "681ba5c8-1f95-4236-bc11-00f25b438af6",
+		"name": "Music App Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "27234640",
+		"_collection_link": "https://dark-eclipse-407528.postman.co/workspace/Team-Workspace~bdbec147-9777-46a6-8440-4e763aec05ff/collection/27234640-681ba5c8-1f95-4236-bc11-00f25b438af6?action=share&source=collection_link&creator=27234640"
+	},
+	"item": [
+		{
+			"name": "insertUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Thanh Xuân",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": []
+						},
+						{
+							"key": "username",
+							"value": "xuanlinh1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8083/api/Users/insert"
+			},
+			"response": []
+		},
+		{
+			"name": "insertAmin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Thanh Xuân",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/D:/Thanh Xuân/anh_the.jpg"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://13.236.68.107:8083/api/Users/insertAdmin"
+			},
+			"response": []
+		},
+		{
+			"name": "update user",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userId",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "Nguyễn Thanh Xuân",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "thanhxuan",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://13.236.68.107:8083/api/Users/update"
+			},
+			"response": []
+		},
+		{
+			"name": "change avatar user",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/D:/projectMusic/Ảnh/matngot.jpg"
+						},
+						{
+							"key": "userId",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://13.236.68.107:8083/api/Users/changeAvatar"
+			},
+			"response": []
+		},
+		{
+			"name": "update user unfollow",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "followerId",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "userId",
+							"value": "2",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://13.236.68.107:8083/api/Users/unfollow?userId=3&followerId=2",
+					"protocol": "http",
+					"host": [
+						"13",
+						"236",
+						"68",
+						"107"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"Users",
+						"unfollow"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "3"
+						},
+						{
+							"key": "followerId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user follower",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "followerId",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "userId",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://13.236.68.107:8083/api/Users/follow"
+			},
+			"response": []
+		},
+		{
+			"name": "insertSongByAdmin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Yêu anh đi mẹ anh bán bánh mì",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/D:/projectMusic/Ảnh/yeuanhdimeanhbanbanhmi.jpg"
+						},
+						{
+							"key": "song",
+							"type": "file",
+							"src": "/D:/projectMusic/Nhạc/YeuAnhDiMeAnhBanBanhMi-PhucDu-8698703.mp3"
+						},
+						{
+							"key": "category",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "creator",
+							"value": "7",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8083/api/Songs/insertbyadmin"
+			},
+			"response": []
+		},
+		{
+			"name": "insertSongByUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Trên tình bạn dưới tình yêu",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/D:/projectMusic/Ảnh/trentinhbanduoitinhyeu.jpg"
+						},
+						{
+							"key": "song",
+							"type": "file",
+							"src": "/D:/projectMusic/Nhạc/TrenTinhBanDuoiTinhYeu-MIN16Typh-6938265.mp3"
+						},
+						{
+							"key": "creator",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8083/api/Songs/insertbyuser"
+			},
+			"response": []
+		},
+		{
+			"name": "update dowloadcount",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Mật Ngọt",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/D:/projectMusic/Ảnh/matngot.jpg"
+						},
+						{
+							"key": "song",
+							"type": "file",
+							"src": "/D:/projectMusic/Nhạc/MatNgot-DungHoangPham-9359370.mp3"
+						},
+						{
+							"key": "category",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "creator",
+							"value": "11",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/Songs/1/download",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"Songs",
+						"1",
+						"download"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update listenedcount",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Mật Ngọt",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/D:/projectMusic/Ảnh/matngot.jpg"
+						},
+						{
+							"key": "song",
+							"type": "file",
+							"src": "/D:/projectMusic/Nhạc/MatNgot-DungHoangPham-9359370.mp3"
+						},
+						{
+							"key": "category",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "creator",
+							"value": "11",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/Songs/1/listened",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"Songs",
+						"1",
+						"listened"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update song",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/Songs/update?songId=21&name=Thủ đô cypher",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"Songs",
+						"update"
+					],
+					"query": [
+						{
+							"key": "songId",
+							"value": "21"
+						},
+						{
+							"key": "name",
+							"value": "Thủ đô cypher"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": "http://13.236.68.107:8083/api/Users/ShowAll"
+			},
+			"response": []
+		},
+		{
+			"name": "check user name",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "xuanlinh",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/Users/checkUserName?username=xuanlinh",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"Users",
+						"checkUserName"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "xuanlinh"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show all song dto",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": ""
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": "http://localhost:8083/api/Songs/GetAllSong"
+			},
+			"response": []
+		},
+		{
+			"name": "get top10MostListenedSongs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": "http://localhost:8083/api/Songs/top10MostListenedSongs"
+			},
+			"response": []
+		},
+		{
+			"name": "Get user by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Thanh Xuân",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/D:/Thanh Xuân/anh_the.jpg",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "xuanlinh",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "Password",
+							"value": "123",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": "http://localhost:8083/api/Users/show/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Get song by id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/Songs/show?songId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"Songs",
+						"show"
+					],
+					"query": [
+						{
+							"key": "songId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete song by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/Songs/delete?id=4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"Songs",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Thanh Xuân",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/D:/Thanh Xuân/anh_the.jpg",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "xuanlinh",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "Password",
+							"value": "123",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/Users/delete?id=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"Users",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete playlist by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Thanh Xuân",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/D:/Thanh Xuân/anh_the.jpg",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "xuanlinh",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "Password",
+							"value": "123",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/Playlists/delete?id=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"Playlists",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/Search/searchAll?searchText=t&userId=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"Search",
+						"searchAll"
+					],
+					"query": [
+						{
+							"key": "searchText",
+							"value": "t"
+						},
+						{
+							"key": "userId",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search song",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/api/Search/searchSong?searchText=mat ngot&userId=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"Search",
+						"searchSong"
+					],
+					"query": [
+						{
+							"key": "searchText",
+							"value": "mat ngot"
+						},
+						{
+							"key": "userId",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all playlist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8083/api/Playlists/ShowAll"
+			},
+			"response": []
+		},
+		{
+			"name": "get playlists by userId",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userId",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/Playlists/ListPlaylistByUser?userId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"Playlists",
+						"ListPlaylistByUser"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get playlist by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/api/Playlists/show?id=8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"Playlists",
+						"show"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insert playlist",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "nhạc chill",
+							"type": "text"
+						},
+						{
+							"key": "creator",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8083/api/Playlists/insert"
+			},
+			"response": []
+		},
+		{
+			"name": "update playlist",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8083/api/Playlists/update/{id}"
+			},
+			"response": []
+		},
+		{
+			"name": "update playlist addSong",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "playlist",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "song",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8083/api/Playlists/addsongtoplaylist"
+			},
+			"response": []
+		},
+		{
+			"name": "update playlist deleteSong",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/api/Playlists/deletesongfromplaylist?playlist=8&song=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"Playlists",
+						"deletesongfromplaylist"
+					],
+					"query": [
+						{
+							"key": "playlist",
+							"value": "8"
+						},
+						{
+							"key": "song",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8083/api/Categories/ShowAll"
+			},
+			"response": []
+		},
+		{
+			"name": "get category by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8083/api/Categories/show/{id}"
+			},
+			"response": []
+		},
+		{
+			"name": "insert category",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Kpop",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8083/api/Categories/insert"
+			},
+			"response": []
+		},
+		{
+			"name": "update category",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"kpop\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8083/api/Categories/update/6"
+			},
+			"response": []
+		},
+		{
+			"name": "del category by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8083/api/Categories/delete/5"
+			},
+			"response": []
+		},
+		{
+			"name": "get all search histories",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8083/api/SearchHistories/ShowAll"
+			},
+			"response": []
+		},
+		{
+			"name": "get all search histories by User id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userId",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/SearchHistories/ShowHistoryByUserId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"SearchHistories",
+						"ShowHistoryByUserId"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insert listened history",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "userId",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "songId",
+							"value": "4",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://localhost:8083/api/ListenedHistories/insert"
+			},
+			"response": []
+		},
+		{
+			"name": "get all Listened History",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8083/api/ListenedHistories/ShowAll"
+			},
+			"response": []
+		},
+		{
+			"name": "get listened history by userid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/api/ListenedHistories/showbyuserid?userId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"ListenedHistories",
+						"showbyuserid"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "hoaithuong2",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/Users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"Users",
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "xuanlinh",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login Copy",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "hoaithuong2",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/Users/loginAdmin?username=xuanlinh&password=123456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"Users",
+						"loginAdmin"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "xuanlinh"
+						},
+						{
+							"key": "password",
+							"value": "123456"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add song to playlist",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/api/Playlists/addsongtoplaylist?song=1&playlist=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"Playlists",
+						"addsongtoplaylist"
+					],
+					"query": [
+						{
+							"key": "song",
+							"value": "1"
+						},
+						{
+							"key": "playlist",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete song from playlist",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/api/Playlists/deletesongfromplaylist?playlist=3&song=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"Playlists",
+						"deletesongfromplaylist"
+					],
+					"query": [
+						{
+							"key": "playlist",
+							"value": "3"
+						},
+						{
+							"key": "song",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "connect SSE upload progress",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8083/api/Songs/progress"
+			},
+			"response": []
+		},
+		{
+			"name": "socket",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "upload image",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/D:/projectMusic/Ảnh/ungquachung.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8083/api/image/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"api",
+						"image",
+						"upload"
+					],
+					"query": [
+						{
+							"key": "file",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get image",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

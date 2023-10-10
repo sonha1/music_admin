@@ -2,7 +2,7 @@
   "admin": {
     "drawer": {
       "menu": {
-        "calendar": "Calendar",
+        "song": "Songs",
         "dashboard": "Dashboard",
         "help": "Help",
         "home": "Home",
@@ -57,8 +57,8 @@
       "form": {
         "action": "Send Confirmation",
         "back": "Back to login",
-        "email": {
-          "label": "E-mail Address"
+        "username": {
+          "label": "Username"
         }
       },
       "notifications": {
@@ -90,8 +90,8 @@
     "login": {
       "forgotPasswordLink": "Forgot password?",
       "form": {
-        "email": {
-          "label": "E-mail Address"
+        "username": {
+          "label": "Username"
         },
         "password": {
           "label": "Password"
@@ -104,8 +104,8 @@
     "register": {
       "back": "Back to login",
       "form": {
-        "email": {
-          "label": "E-mail Address"
+        "username": {
+          "label": "Username"
         },
         "firstName": {
           "label": "First Name"
@@ -201,7 +201,7 @@
     "today": "Today",
     "update": "Update",
     "validations": {
-      "email": "Invalid email address",
+      "username": "Invalid username",
       "max": "Must be {{size}} characters or less",
       "min": "Must be {{size}} characters or more",
       "passwordMatch": "Password does not match",
@@ -323,8 +323,8 @@
     },
     "info": {
       "form": {
-        "email": {
-          "label": "Email Address"
+        "username": {
+          "label": "Username"
         },
         "firstName": {
           "label": "First Name"
@@ -408,8 +408,8 @@
       "disabled": {
         "label": "Disabled"
       },
-      "email": {
-        "label": "Email Address"
+      "username": {
+        "label": "Username"
       },
       "firstName": {
         "label": "First Name"
@@ -450,7 +450,58 @@
         "gender": "Gender",
         "role": "Role",
         "status": "Status",
+        "followCount": "Follower Count",
         "user": "User"
+      }
+    },
+    "toolbar": {
+      "title": "Users"
+    }
+  },
+  "songManagement": {
+    "confirmations": {
+      "delete": "Are you sure you want to delete this song?"
+    },
+    "form": {
+      "author": {
+        "label": "Author"
+      },
+      "name": {
+        "label": "Song Name"
+      },
+      "singer": {
+        "label": "Singer"
+      },
+      "ownerUser": {
+        "label": "Owner User id"
+      },
+      "url": {
+        "label": "Song Url"
+      }
+    },
+    "modal": {
+      "add": {
+        "action": "Add",
+        "title": "Add Song"
+      },
+      "edit": {
+        "action": "Edit",
+        "title": "Edit Song"
+      }
+    },
+    "notifications": {
+      "addSuccess": "{{song}} has been added!",
+      "deleteSuccess": "Song(s) have been deleted!",
+      "updateSuccess": "{{song}} has been updated!"
+    },
+    "table": {
+      "headers": {
+        "actions": "Actions",
+        "name": "Song Name",
+        "author": "Author",
+        "url": "Song Url",
+        "listenCount": "Listen Count",
+        "ownerUser": "Owner User"
       }
     },
     "toolbar": {

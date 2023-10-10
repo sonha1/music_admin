@@ -44,13 +44,8 @@ export const menuItems = [
   },
   {
     icon: EventIcon,
-    key: "admin.drawer.menu.calendar",
-    path: "/admin/calendar",
-  },
-  {
-    icon: AccountTreeIcon,
-    key: "admin.drawer.menu.projects",
-    path: "/admin/projects",
+    key: "admin.drawer.menu.song",
+    path: "/admin/song-management",
   },
   {
     icon: HelpCenterIcon,

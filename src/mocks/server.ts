@@ -6,7 +6,7 @@ import notifications from "./notifications.json";
 import profileInfo from "./profileInfo.json";
 import userInfo from "./userInfo.json";
 import users from "./users.json";
-
+import songs from "./songs.json";
 const now = Date.now();
 
 function generateId() {
@@ -23,11 +23,11 @@ mock.onGet("/api/activity-logs").reply(200, activityLogs);
 mock.onPut("/api/password").reply(({ data }) => [200, data]);
 mock.onPost("/api/forgot-password").reply(200);
 mock.onPost("/api/forgot-password-submit").reply(200);
-mock.onPost("/api/login").reply(200, "AUTHKEY123");
+mock.onPost("/api/login").reply(200, "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c");
 mock.onPost("/api/logout").reply(200);
 mock.onPost("/api/register").reply(201);
 mock
-  .onGet("/api/user-info", { params: { key: "AUTHKEY123" } })
+  .onGet("/api/user-info", { params: { key: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c" } })
   .reply(200, userInfo);
 
 // Events
@@ -55,3 +55,10 @@ mock
   .onPost("/api/users")
   .reply(({ data }) => [201, { ...JSON.parse(data), id: generateId() }]);
 mock.onPut("/api/users").reply(({ data }) => [200, data]);
+
+mock.onDelete("/api/songs").reply(({ data }) => [200, data]);
+mock.onGet("/api/songs").reply(200, songs);
+mock
+    .onPost("/api/songs")
+    .reply(({ data }) => [201, { ...JSON.parse(data), id: generateId() }]);
+mock.onPut("/api/songs").reply(({ data }) => [200, data]);

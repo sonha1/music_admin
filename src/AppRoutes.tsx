@@ -38,7 +38,7 @@ const Landing = lazy(() => import("./landing/pages/Landing"));
 
 // Users
 const UserManagement = lazy(() => import("./users/pages/UserManagement"));
-
+const SongManagement = lazy(() => import("./songs/pages/SongManagement"));
 const AppRoutes = () => {
   return (
     <Routes basename={process.env.PUBLIC_URL}>
@@ -63,7 +63,8 @@ const AppRoutes = () => {
             />
           }
         />
-        <PrivateRoute path="user-management" element={<UserManagement />} />
+          <PrivateRoute path="user-management" element={<UserManagement/>}/>
+          <PrivateRoute path="song-management" element={<SongManagement/>}/>
       </PrivateRoute>
       <Route path="forgot-password" element={<ForgotPassword />} />
       <Route path="forgot-password-submit" element={<ForgotPasswordSubmit />} />

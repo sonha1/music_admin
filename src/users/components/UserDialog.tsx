@@ -56,15 +56,14 @@ const UserDialog = ({
   const formik = useFormik({
     initialValues: {
       disabled: user ? user.disabled : false,
-      email: user ? user.email : "",
+      username: user ? user.username : "",
       firstName: user ? user.firstName : "",
       gender: user ? user.gender : "F",
       lastName: user ? user.lastName : "",
       role: user ? user.role : "",
     },
     validationSchema: Yup.object({
-      email: Yup.string()
-        .email(t("common.validations.email"))
+      username: Yup.string()
         .required(t("common.validations.required")),
       firstName: Yup.string()
         .max(20, t("common.validations.max", { size: 20 }))
@@ -141,15 +140,15 @@ const UserDialog = ({
             margin="normal"
             required
             fullWidth
-            id="email"
-            label={t("userManagement.form.email.label")}
-            name="email"
-            autoComplete="email"
+            id="username"
+            label={t("userManagement.form.username.label")}
+            name="username"
+            autoComplete="username"
             disabled={processing}
-            value={formik.values.email}
+            value={formik.values.username}
             onChange={formik.handleChange}
-            error={formik.touched.email && Boolean(formik.errors.email)}
-            helperText={formik.touched.email && formik.errors.email}
+            error={formik.touched.username && Boolean(formik.errors.username)}
+            helperText={formik.touched.username && formik.errors.username}
           />
           <TextField
             margin="normal"

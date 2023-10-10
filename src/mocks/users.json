@@ -3,110 +3,121 @@
     "id": "1",
     "avatar": "",
     "disabled": false,
-    "email": "rhys@arriaga.com",
+    "username": "rhys",
     "firstName": "Rhys",
     "gender": "M",
     "lastName": "Arriaga",
-    "role": "Admin"
+    "role": "Admin",
+    "followerCount":3
   },
   {
     "id": "2",
     "avatar": "",
     "disabled": false,
-    "email": "laura@core.com",
+    "username": "laura",
     "firstName": "Laura",
     "gender": "F",
     "lastName": "Core",
-    "role": "Member"
+    "role": "Member",
+    "followerCount":3
   },
   {
     "id": "3",
     "avatar": "",
     "disabled": false,
-    "email": "joshua@jagger.com",
+    "username": "joshua",
     "firstName": "Joshua",
     "gender": "M",
     "lastName": "Jagger",
-    "role": "Member"
+    "role": "Member",
+    "followerCount":3
   },
   {
     "id": "4",
     "avatar": "",
     "disabled": true,
-    "email": "jason@jimenez.com",
+    "username": "jason",
     "firstName": "Jason",
     "gender": "M",
     "lastName": "Jimenez",
-    "role": "Member"
+    "role": "Member",
+    "followerCount":3
   },
   {
     "id": "5",
     "avatar": "",
     "disabled": true,
-    "email": "rhonda@mcguire.com",
+    "username": "rhonda",
     "firstName": "Rhonda",
     "gender": "F",
     "lastName": "Mcguire",
-    "role": "Member"
+    "role": "Member",
+    "followerCount":3
   },
   {
     "id": "6",
     "avatar": "",
     "disabled": false,
-    "email": "aaron@moreno.com",
+    "username": "aaron",
     "firstName": "Aaron",
     "gender": "M",
     "lastName": "Moreno",
-    "role": "Member"
+    "role": "Member",
+    "followerCount":3
   },
   {
     "id": "7",
     "avatar": "",
     "disabled": false,
-    "email": "carley@murray.com",
+    "username": "carley",
     "firstName": "Carley",
     "gender": "F",
     "lastName": "Murray",
-    "role": "Member"
+    "role": "Member",
+    "followerCount":3
   },
   {
     "id": "8",
     "avatar": "",
     "disabled": false,
-    "email": "cherise@owen.com",
+    "username": "cherise",
     "firstName": "Cherise",
     "gender": "F",
     "lastName": "Owen",
-    "role": "Member"
+    "role": "Member",
+    "followerCount":3
   },
   {
     "id": "9",
     "avatar": "",
     "disabled": false,
-    "email": "nathan@romero.com",
+    "username": "nathan",
     "firstName": "Nathan",
     "gender": "M",
     "lastName": "Romero",
-    "role": "Member"
+    "role": "Member",
+    "followerCount":3
   },
   {
     "id": "10",
     "avatar": "",
     "disabled": false,
-    "email": "olivia@spence.com",
+    "username": "olivia",
     "firstName": "Olivia",
     "gender": "F",
     "lastName": "Spence",
-    "role": "Member"
+    "role": "Member",
+    "followerCount":3
   },
   {
     "id": "11",
     "avatar": "",
     "disabled": false,
-    "email": "elisha@wade.com",
+    "username": "elisha",
     "firstName": "Elisha",
     "gender": "F",
     "lastName": "Wade",
-    "role": "Member"
+    "role": "Member",
+    "followerCount":3
   }
 ]
